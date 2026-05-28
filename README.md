@@ -31,9 +31,10 @@ O programa foi **compilado e testado em mainframe real** (emulado via Hercules +
 
 ### Execução Interativa pelo Menu
 
-![Demo do Menu](docs/demo-menu.gif)
+<img width="722" height="372" alt="1_ TK5 - TN3270 Plus 2026-05-28 20-07-17" src="https://github.com/user-attachments/assets/65f569b6-2c68-42c7-87e3-b003ffdd8bd9" />
 
 > *Programa rodando no mainframe TK5 com interação via TSO*
+> 
 
 ---
 
@@ -41,21 +42,23 @@ O programa foi **compilado e testado em mainframe real** (emulado via Hercules +
 
 ### 🛠️ JCL de Compilação
 
-![JCL Compilação](docs/jcl-compilacao.png)
+<img width="1919" height="1030" alt="Captura de tela 2026-05-28 200958" src="https://github.com/user-attachments/assets/394af82a-077b-4574-aa82-7a294e5c2730" />
 
 > *JCL usando procedimento **COBUCL** para compilar e linkeditar o programa SALARYPJ*
+> 
 
 ### ▶️ JCL de Execução
 
-![JCL Execução](docs/jcl-execucao.png)
+<img width="1918" height="1031" alt="Captura de tela 2026-05-28 201126" src="https://github.com/user-attachments/assets/41397fa5-dd4b-4918-ba38-1da391aa756f" />
 
 > *JCL que executa o programa SALARYPJ passando os dados via SYSIN*
 
 ### 📊 Resultado da Execução
 
-![Resultado](docs/resultado-execucao.png)
+<img width="1919" height="1033" alt="Captura de tela 2026-05-28 201230" src="https://github.com/user-attachments/assets/5415ecbf-6cf3-42cd-a130-20e7806c8fe9" />
 
 > *Saída do programa exibindo o resumo do cálculo de salário com bônus aplicado*
+> 
 
 ---
 
@@ -63,11 +66,6 @@ O programa foi **compilado e testado em mainframe real** (emulado via Hercules +
 
 ```
 cobol-salary-calculator/
-├── docs/
-│   ├── demo-menu.gif           # Demonstração em vídeo
-│   ├── jcl-compilacao.png      # Screenshot do JCL de compilação
-│   ├── jcl-execucao.png        # Screenshot do JCL de execução
-│   └── resultado-execucao.png  # Screenshot do resultado
 ├── src/
 │   └── SALARYPJ.cbl            # Código-fonte COBOL principal
 ├── .gitignore
@@ -127,6 +125,10 @@ PROCEDURE DIVISION         → Lógica do programa
 
 ### 2️⃣ Transferir o arquivo para o mainframe
 
+Host -> File Transfer...
+
+ou
+
 Crie um script `PutSalarypj.mac.txt`:
 
 ```
@@ -140,7 +142,7 @@ FileTransfer    operation=send,
 exit
 ```
 
-Execute via: `Macros → Run Macro → PutSalarypj.mac.txt`
+Execute via: `Host → Run Script... → PutSalarypj.mac.txt`
 
 ### 3️⃣ JCL de Compilação
 
@@ -196,7 +198,10 @@ MARIA SOUZA
 2
 /*
 ```
-
+Compile com:
+```
+SUB
+```
 ---
 
 ## 📊 Tabela de Cálculo
